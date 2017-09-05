@@ -1,0 +1,137 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Hexo 기본 사용법 | C:\EEDLIVE</title><link rel="stylesheet" href="/libs/normalize.min.css"><link rel="stylesheet" href="/libs/font-awesome-4.6.3/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/highlights/dracula.css"><link rel="canonical" href="https://ceedlive.github.io/2017/09/05/hexo-basic-usage/"/>
+<meta name="description" content="정의 Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.  Front-matter마크다운 파일 최상단에 있는 포스트 정보 설정 영역.--- 로 구분되어 있음.YAML 이나 JSON 으로 정보 설정 가능. YAML1ti">
+<meta name="keywords" content="hexo,blog,framework">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 기본 사용법">
+<meta property="og:url" content="https://ceedlive.github.io/2017/09/05/hexo-basic-usage/index.html">
+<meta property="og:site_name" content="C:\EEDLIVE">
+<meta property="og:description" content="정의 Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.  Front-matter마크다운 파일 최상단에 있는 포스트 정보 설정 영역.--- 로 구분되어 있음.YAML 이나 JSON 으로 정보 설정 가능. YAML1ti">
+<meta property="og:image" content="https://ceedlive.github.io/images/default.jpg">
+<meta property="og:updated_time" content="2017-09-05T12:51:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo 기본 사용법">
+<meta name="twitter:description" content="정의 Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.  Front-matter마크다운 파일 최상단에 있는 포스트 정보 설정 영역.--- 로 구분되어 있음.YAML 이나 JSON 으로 정보 설정 가능. YAML1ti">
+<meta name="twitter:image" content="https://ceedlive.github.io/images/default.jpg"><meta property="article:author" content="better than choi"><link rel="icon" href="/images/logo.svg"><link rel="alternative" href="/atom.xml" type="application/atom+xml" title="C:\EEDLIVE"></head><body itemscope itemtype="https://schema.org/WebPage"><nav id="menu" class="menu"><div class="menu-inner"><div class="menu__left-area"><div class="menu__item"><a href="/" title="Home" rel="home" class="menu__item__link menu__item__link--brand"><img src="/images/logo.svg" alt="C:\EEDLIVE" class="menu__item__link--brand__image"><span class="menu__item__link--brand__label">C:\EEDLIVE</span></a></div></div><div class="menu__right-area"><div class="menu__item"><a href="/" class="menu__item__link">Home</a></div><div class="menu__item"><a href="/about" class="menu__item__link">About</a></div><div class="menu__item"><a href="/archives" class="menu__item__link">Archives</a></div><div class="menu__item"><a href="/resume" class="menu__item__link">Resume</a></div></div></div></nav><div class="page-background"></div><div class="content-outer"><div itemscope itemtype="https://schema.org/Blog" class="content-inner"><article id="article" itemscope itemtype="https://schema.org/BlogPosting" class="article"><h1 itemprop="headline" class="article__title">Hexo 기본 사용법</h1><div class="article__meta"><time datetime="2017-09-05T12:51:38.000Z" itemprop="datePublished" class="article__meta__time">2017-09-05 21:51:38</time><div class="article__meta__categories"><a href="/categories/Hexo/" class="article__meta__categories__item">Hexo</a></div></div><hr><div class="article__contents"><h2 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h2><blockquote>
+<p>Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.</p>
+</blockquote>
+<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>마크다운 파일 최상단에 있는 포스트 정보 설정 영역.<br><code>---</code> 로 구분되어 있음.<br><strong>YAML</strong> 이나 <strong>JSON</strong> 으로 정보 설정 가능.</p>
+<figure class="highlight bash"><figcaption><span>YAML</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">title: Hexo 기본 사용법</div></pre></td></tr></table></figure>
+<h3 id="설정"><a href="#설정" class="headerlink" title="설정"></a>설정</h3><table>
+<thead>
+<tr>
+<th>설정</th>
+<th>설명</th>
+<th>기본값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>레이아웃</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>제목</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>배포한 날짜</td>
+<td>파일 생성 날짜</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>수정된 날짜</td>
+<td>파일 생성 날짜</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>코멘트 기능 여부</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>태그 (Page 에서는 사용 불가)</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td>카테고리 (Page 에서는 사용 불가)</td>
+<td></td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>포스트의 URL을 수동으로 설정 가능</td>
+<td></td>
+</tr>
+<tr>
+<td>thumbnail</td>
+<td>썸네일 지정</td>
+<td>본문 첫번째 이미지</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>YAML</strong><br>YAML은 XML, C, 파이썬, 펄, RFC2822에서 정의된 e-mail 양식에서 개념을 얻어 만들어진 ‘사람이 쉽게 읽을 수 있는’ 데이터 직렬화 양식이다. 2001년에 클라크 에반스가 고안했고, Ingy dot Net 및 Oren Ben-Kiki와 함께 디자인했다.<br>YAML이라는 이름은 “YAML은 마크업 언어가 아니다 (YAML Ain’t Markup Language)” 라는 재귀적인 이름에서 유래되었다. 원래 YAML의 뜻은 “또 다른 마크업 언어 (Yet Another Markup Language)”였으나, YAML의 핵심은 문서 마크업이 아닌 데이터 중심에 있다는 것을 보여주기 위해 이름을 바꾸었다. 오늘날 XML이 데이터 직렬화에 주로 쓰이기 시작하면서, 많은 사람들이 YAML을 ‘가벼운 마크업 언어’로 사용하려 하고 있다.<br>출처 <a href="https://ko.wikipedia.org/wiki/YAML" target="_blank" rel="external">YAML - 위키백과, 우리 모두의 백과사전</a>  </p>
+<hr>
+<p><strong>JSON</strong><br>JSON(제이슨[1], JavaScript Object Notation)은 속성-값 쌍으로 이루어진 데이터 오브젝트를 전달하기 위해 인간이 읽을 수 있는 텍스트를 사용하는 개방형 표준 포맷이다. 비동기 브라우저/서버 통신 (AJAX)을 위해, 넓게는 XML(AJAX가 사용)을 대체하는 주요 데이터 포맷이다. 특히, 인터넷에서 자료를 주고 받을 때 그 자료를 표현하는 방법으로 알려져 있다. 자료의 종류에 큰 제한은 없으며, 특히 컴퓨터 프로그램의 변수값을 표현하는 데 적합하다.<br>본래는 자바스크립트 언어로부터 파생되어 자바스크립트의 구문 형식을 따르지만 언어 독립형 데이터 포맷이다. 즉, 프로그래밍 언어나 플랫폼에 독립적이므로, 구문 분석 및 JSON 데이터 생성을 위한 코드는 C, C++, C#, 자바, 자바스크립트, 펄, 파이썬 등 수많은 프로그래밍 언어에서 쉽게 이용할 수 있다.<br>JSON 포맷은 본래 더글라스 크록포드가 규정하였다. RFC 7159와 ECMA-404라는 두 개의 경쟁 표준에 의해 기술되고 있다. ECMA 표준은 문법만 정의할 정도로 최소한으로만 정의되어 있는 반면 RFC는 시맨틱, 보안적 고려 사항을 일부 제공하기도 한다.[2] JSON의 공식 인터넷 미디어 타입은 application/json이며, JSON의 파일 확장자는 .json이다.<br>출처 <a href="https://ko.wikipedia.org/wiki/JSON" target="_blank" rel="external">JSON - 위키백과, 우리 모두의 백과사전</a>  </p>
+</blockquote>
+<h2 id="로컬서버"><a href="#로컬서버" class="headerlink" title="로컬서버"></a>로컬서버</h2><p>로컬서버 구동. draft로 작성한 초안 보이지 않음.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
+<p>로컬서버 구동. draft로 작성한 초안 보임.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server --draft</div></pre></td></tr></table></figure>
+<p>로컬서버 구동. 옵션 2개 이상 사용 예시.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server --o --draft</div></pre></td></tr></table></figure>
+<h3 id="설정-1"><a href="#설정-1" class="headerlink" title="설정"></a>설정</h3><table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>설명</th>
+<th>기본값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>–i, –ip</td>
+<td>서버 IP를 지정합니다.</td>
+<td>0.0.0.0</td>
+</tr>
+<tr>
+<td>–p, –port</td>
+<td>포트 번호를 지정합니다.</td>
+<td>4000</td>
+</tr>
+<tr>
+<td>–s, –static</td>
+<td>정적 (static) 파일만 게시합니다.</td>
+<td>false</td>
+</tr>
+<tr>
+<td>–l, –log</td>
+<td>서버 로그를 표시합니다.</td>
+<td>false</td>
+</tr>
+<tr>
+<td>–o, –open</td>
+<td>서버 기동과 동시에 브라우저 창으로 접속합니다.</td>
+<td>false</td>
+</tr>
+<tr>
+<td>–draft</td>
+<td>초안도 게시합니다.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="카테고리-태그"><a href="#카테고리-태그" class="headerlink" title="카테고리/태그"></a>카테고리/태그</h2><p>카테고리와 태그는 Post와 Draft에서 사용 가능.<br>카테고리를 지정하면 메인 화면의 메뉴에 카테고리 자동 추가. 카테고리/태그는 여러 개 설정 가능.<br>Post or Draft 마크다운 파일 상단의 <strong>front-matter</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Hexo 기본 사용법</div><div class="line">tags:</div><div class="line">- Hexo</div><div class="line">categories:</div><div class="line">- hexo</div><div class="line">- blog</div><div class="line">- framework</div><div class="line">---</div></pre></td></tr></table></figure>
+<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><p>Hexo 기본 사용법 <a href="http://futurecreator.github.io/2016/06/21/hexo-basic-usage/" target="_blank" rel="external">http://futurecreator.github.io/2016/06/21/hexo-basic-usage/</a></p>
+</div><div class="article__tags"><a href="/tags/hexo/" class="article__tags__item">hexo</a><a href="/tags/blog/" class="article__tags__item">blog</a><a href="/tags/framework/" class="article__tags__item">framework</a></div><div itemscope itemprop="author" itemtype="https://schema.org/Person" class="article__author"><img src="/images/gravatar_rated_g.jpeg" alt="better than choi" class="article__author__image"><a title="About better than choi" rel="author" class="article__author__link">better than choi</a><p class="article__author__desc">소프트웨어를 도구로 인류와 사회의 가치를 높이는데 소명을 다하는 삶</p><div class="article__author__socials"><a href="/atom.xml" title="rss" target="_blank" class="article__author__socials__item"><i class="fa fa-rss"></i></a></div><meta itemprop="name" content="better than choi"></div><div id="sharer" class="sharer"><div class="sharer-inner"><div class="sharer__right"><button id="sharer-facebook" class="sharer__item"><i class="fa fa-facebook-official"></i></button><button id="sharer-twitter" class="sharer__item"><i class="fa fa-twitter"></i></button><button id="sharer-pinterest" class="sharer__item"><i class="fa fa-pinterest"></i></button><button id="sharer-pocket" class="sharer__item"><i class="fa fa-get-pocket"></i></button></div></div></div><!-- Disqus Code--><div id="disqus_thread"></div><script>(function() {
+  var d = document, s = d.createElement('script');
+  s.src = '//ceedlive.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();</script><noscript>Enable JavaScript to see comments.</noscript><!-- Meta Tags for Structured Data--><meta itemprop="dateModified" content="2017-09-05T12:51:38.000Z"><meta itemprop="articleBody" content="정의
+Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.
+
+Front-matter마크다운 파일 최상단에 있는 포스트 정보 설정 영역.--- 로 구분되어 있음.YAML 이나 JSON 으로 정보 설정..."><meta itemprop="url" content="https://ceedlive.github.io/2017/09/05/hexo-basic-usage/"><meta itemprop="mainEntityOfPage" content="https://ceedlive.github.io/2017/09/05/hexo-basic-usage/"><div itemscope itemtype="https://schema.org/Organization" itemprop="publisher"><meta itemprop="name" content="C:\EEDLIVE"><div itemscope itemprop="logo" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://ceedlive.github.io/images/logo.svg"></div></div><div itemscope itemtype="https://schema.org/ImageObject" itemprop="image"><meta itemprop="contentUrl" content="https://ceedlive.github.io/images/default.jpg"><meta itemprop="url" content="https://ceedlive.github.io/images/default.jpg"><meta itemprop="width" content="1280"><meta itemprop="height" content="720"></div></article><section class="related-posts"><h3>Related posts</h3><div class="related-posts__item__wrapper"><a href="/2017/09/05/hexo-tag-plugins/" class="related-posts__item"><div style="background-image: url('/images/default.jpg')" class="related-posts__item__background"></div><div class="related-posts__item__overlay"></div><span class="related-posts__item__title">Hexo 태그 플러그인 (Tag plugins)</span></a></div><div class="related-posts__item__wrapper"><a href="/2017/08/29/create-blog-github-pages-and-hexo/" class="related-posts__item"><div style="background-image: url('/images/default.jpg')" class="related-posts__item__background"></div><div class="related-posts__item__overlay"></div><span class="related-posts__item__title">GitHub Pages와 Hexo를 이용하여 블로그 시작하기</span></a></div></section></div></div><footer id="footer"><div class="widgets"><div class="widgets-inner"><!-- Jade doesn't support dynamic inclusion with `each`.--><!-- So, I just hard coded the file names that will be included.--><div class="widgets__item"><h3 class="widgets__item__heading">Recent posts</h3><ul class="recent-posts"><li class="recent-posts__item"><a href="/2017/09/05/hexo-tag-plugins/">Hexo 태그 플러그인 (Tag plugins)</a></li><li class="recent-posts__item"><a href="/2017/09/05/hexo-basic-usage/">Hexo 기본 사용법</a></li><li class="recent-posts__item"><a href="/2017/09/02/java-find-string/">자바 - 문자열 찾기</a></li><li class="recent-posts__item"><a href="/2017/09/01/java-create-random-key/">자바 - 중복되지 않는 키 생성</a></li><li class="recent-posts__item"><a href="/2017/08/29/create-blog-github-pages-and-hexo/">GitHub Pages와 Hexo를 이용하여 블로그 시작하기</a></li></ul></div><div class="widgets__item"><h3 class="widgets__item__heading">Archives</h3><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li></ul></div><div class="widgets__item"><h3 class="widgets__item__heading">Categories</h3><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Class/">Class</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Method/">Method</a><span class="category-list-count">1</span></li></ul></li></ul></div></div></div><p class="copyright"><small>© 2017 better than choi<br>Powered by <a href="https://hexo.io" rel="external" target="_blank">Hexo</a>, Theme by <a href="https://github.com/hyunseob" rel="external" target="_blank">HyunSeob</a></small></p></footer><script src="/js/sharer.min.js"></script></body></html>
