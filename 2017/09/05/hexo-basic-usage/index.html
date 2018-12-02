@@ -1,155 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- Head tag -->
 <head><meta name="generator" content="Hexo 3.8.0">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="정의 Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.  Front-matter마크다운 파일 최상단에 있는 포스트 정보 설정 영역.--- 로 구분되어 있음.YAML 이나 JSON 으로 정보 설정 가능. YAML1ti">
-<meta name="keywords" content="hexo,blog,framework">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 기본 사용법">
-<meta property="og:url" content="https://ceedlive.github.io/2017/09/05/hexo-basic-usage/index.html">
-<meta property="og:site_name" content="C:\EEDLIVE">
-<meta property="og:description" content="정의 Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.  Front-matter마크다운 파일 최상단에 있는 포스트 정보 설정 영역.--- 로 구분되어 있음.YAML 이나 JSON 으로 정보 설정 가능. YAML1ti">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-10-10T14:10:57.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 기본 사용법">
-<meta name="twitter:description" content="정의 Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.  Front-matter마크다운 파일 최상단에 있는 포스트 정보 설정 영역.--- 로 구분되어 있음.YAML 이나 JSON 으로 정보 설정 가능. YAML1ti">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-          
-        
-    
-    <!-- title -->
-    <title>Hexo 기본 사용법</title>
-    <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- persian styles -->
-    
-      <link rel="stylesheet" href="/css/rtl.css">
-    
-    <!-- rss -->
-    
-    
-</head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/2017/09/05/hexo-tag-plugins/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" href="/2017/09/02/java-find-string/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&text=Hexo 기본 사용법"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&is_video=false&description=Hexo 기본 사용법"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Hexo 기본 사용법&body=Check out this article: https://ceedlive.github.io/2017/09/05/hexo-basic-usage/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&name=Hexo 기본 사용법&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#정의"><span class="toc-number">1.</span> <span class="toc-text">정의</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter"><span class="toc-number">2.</span> <span class="toc-text">Front-matter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#설정"><span class="toc-number">2.1.</span> <span class="toc-text">설정</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#로컬서버"><span class="toc-number">3.</span> <span class="toc-text">로컬서버</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#설정-1"><span class="toc-number">3.1.</span> <span class="toc-text">설정</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#카테고리-태그"><span class="toc-number">4.</span> <span class="toc-text">카테고리/태그</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#참고"><span class="toc-number">5.</span> <span class="toc-text">참고</span></a></li></ol>
-    </div>
-  </span>
-</div>
-
-    
-    <div class="content index py4">
-        
-        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle" itemprop="name headline">
-        Hexo 기본 사용법
-    </h1>
-
-
-
-    <div class="meta">
-      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span itemprop="name">C:\EEDLIVE</span>
-      </span>
-      
-    <div class="postdate">
-        <time datetime="2017-09-05T12:51:38.000Z" itemprop="datePublished">2017-09-05</time>
-    </div>
-
-
-      
-    <div class="article-category">
-        <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/Hexo/">Hexo</a>
-    </div>
-
-
-      
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/blog/">blog</a>, <a class="tag-link" href="/tags/framework/">framework</a>, <a class="tag-link" href="/tags/hexo/">hexo</a>
-    </div>
-
-
-    </div>
-  </header>
+  <!--Description-->
+  
+  <meta name="description" content="소프트웨어를 도구로 인류와 사회의 가치를 높이는데 소명을 다하는 삶">
   
 
-  <div class="content" itemprop="articleBody">
-    <h2 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h2><blockquote>
+  <!--Author-->
+  
+  <meta name="author" content="better than choi">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="Hexo 기본 사용법">
+  
+  <!--Open Graph Description-->
+  
+      <meta property="og:description" content="소프트웨어를 도구로 인류와 사회의 가치를 높이는데 소명을 다하는 삶">
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="C:\EEDLIVE">
+  <!--Type page-->
+  
+      <meta property="og:type" content="article">
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>Hexo 기본 사용법 - C:\EEDLIVE</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://hexo.io/logo.svg" alt="C:\EEDLIVE" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            Hexo 기본 사용법
+            
+          </h1>
+          <p class="posted-on">
+          2017-09-05
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/hexo/" rel="tag">
+                  hexo
+                </a>
+              
+                <a href="/tags/blog/" rel="tag">
+                  blog
+                </a>
+              
+                <a href="/tags/framework/" rel="tag">
+                  framework
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content has_line_number">
+          <h2 id="정의"><a href="#정의" class="headerlink" title="정의"></a>정의</h2><blockquote>
 <p>Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. Markdown(또는 다른 언어)을 사용하여 포스트를 작성하면 Hexo는 금세 멋진 테마를 가미해서 정적인 파일을 생성해 드립니다.</p>
 </blockquote>
 <h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>마크다운 파일 최상단에 있는 포스트 정보 설정 영역.<br><code>---</code> 로 구분되어 있음.<br><strong>YAML</strong> 이나 <strong>JSON</strong> 으로 정보 설정 가능.</p>
@@ -265,98 +259,125 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo 기본 사용법</span><br><span class="line">tags:</span><br><span class="line">- Hexo</span><br><span class="line">categories:</span><br><span class="line">- hexo</span><br><span class="line">- blog</span><br><span class="line">- framework</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><p>Hexo 기본 사용법 <a href="http://futurecreator.github.io/2016/06/21/hexo-basic-usage/" target="_blank" rel="noopener">http://futurecreator.github.io/2016/06/21/hexo-basic-usage/</a><br>헥소 설정기 <a href="https://originerd.github.io/2017/01/21/how-i-set-hexo/" target="_blank" rel="noopener">https://originerd.github.io/2017/01/21/how-i-set-hexo/</a></p>
 
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">Comments</h1> -->
+
+  
+  <div id="disqus_thread">
+    <script type="text/javascript">
+    var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = 'post-hexo-basic-usage';
+          this.page.title = 'Hexo 기본 사용법';
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-</article>
+  
+</section>
 
-
-
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#정의"><span class="toc-number">1.</span> <span class="toc-text">정의</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter"><span class="toc-number">2.</span> <span class="toc-text">Front-matter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#설정"><span class="toc-number">2.1.</span> <span class="toc-text">설정</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#로컬서버"><span class="toc-number">3.</span> <span class="toc-text">로컬서버</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#설정-1"><span class="toc-number">3.1.</span> <span class="toc-text">설정</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#카테고리-태그"><span class="toc-number">4.</span> <span class="toc-text">카테고리/태그</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#참고"><span class="toc-number">5.</span> <span class="toc-text">참고</span></a></li></ol>
-    </div>
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&text=Hexo 기본 사용법"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&is_video=false&description=Hexo 기본 사용법"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Hexo 기본 사용법&body=Check out this article: https://ceedlive.github.io/2017/09/05/hexo-basic-usage/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&title=Hexo 기본 사용법"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ceedlive.github.io/2017/09/05/hexo-basic-usage/&name=Hexo 기본 사용법&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-</ul>
 
     </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2017/09/05/hexo-tag-plugins/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/2017/09/02/java-find-string/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
     </div>
 
   </div>
 </div>
 
-        
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy; 2018 better than choi
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          소프트웨어를 도구로 인류와 사회의 가치를 높이는데 소명을 다하는 삶
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Contact</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/GallenHu" class="icon icon-github" target="_blank">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Search</h1>
+        <div class="widget-text">
+          <form onsubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
   </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
-        
-      </ul>
-    </nav>
-  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>C:\EEDLIVE &copy; 2018</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a></span>
+    
+  </p>
 </footer>
 
-    </div>
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+<script>
+  var disqus_shortname = 'ceedlive';
+
+  
+  var disqus_url = 'https://ceedlive.github.io/2017/09/05/hexo-basic-usage/';
+  
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
 </body>
+
 </html>
-<!-- styles -->
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
-
-<!-- jquery -->
-<script src="/lib/jquery/jquery.min.js"></script>
-<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- search -->
-
-<!-- Google Analytics -->
-
-<!-- Baidu Analytics -->
-
-<!-- Disqus Comments -->
-
-

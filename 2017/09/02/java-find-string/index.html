@@ -1,155 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- Head tag -->
 <head><meta name="generator" content="Hexo 3.8.0">
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="containspublic boolean contains(CharSequence s)Returns true if and only if this string contains the specified sequence of char values.Parameter:s - the sequence to search forReturns:true if this strin">
-<meta name="keywords" content="java,contains,indexOf,matches">
-<meta property="og:type" content="article">
-<meta property="og:title" content="자바 - 문자열 찾기">
-<meta property="og:url" content="https://ceedlive.github.io/2017/09/02/java-find-string/index.html">
-<meta property="og:site_name" content="C:\EEDLIVE">
-<meta property="og:description" content="containspublic boolean contains(CharSequence s)Returns true if and only if this string contains the specified sequence of char values.Parameter:s - the sequence to search forReturns:true if this strin">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-09-05T12:45:38.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="자바 - 문자열 찾기">
-<meta name="twitter:description" content="containspublic boolean contains(CharSequence s)Returns true if and only if this string contains the specified sequence of char values.Parameter:s - the sequence to search forReturns:true if this strin">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-          
-        
-    
-    <!-- title -->
-    <title>자바 - 문자열 찾기</title>
-    <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- persian styles -->
-    
-      <link rel="stylesheet" href="/css/rtl.css">
-    
-    <!-- rss -->
-    
-    
-</head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
-        
-      </ul>
-    </span>
-    <br>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/2017/09/05/hexo-basic-usage/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" href="/2017/09/01/java-create-random-key/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ceedlive.github.io/2017/09/02/java-find-string/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://ceedlive.github.io/2017/09/02/java-find-string/&text=자바 - 문자열 찾기"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ceedlive.github.io/2017/09/02/java-find-string/&is_video=false&description=자바 - 문자열 찾기"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=자바 - 문자열 찾기&body=Check out this article: https://ceedlive.github.io/2017/09/02/java-find-string/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ceedlive.github.io/2017/09/02/java-find-string/&name=자바 - 문자열 찾기&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#contains"><span class="toc-number">1.</span> <span class="toc-text">contains</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#indexOf"><span class="toc-number">2.</span> <span class="toc-text">indexOf</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#matches"><span class="toc-number">3.</span> <span class="toc-text">matches</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#백문이-불여일타"><span class="toc-number">4.</span> <span class="toc-text">백문이 불여일타</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#참고"><span class="toc-number">5.</span> <span class="toc-text">참고</span></a></li></ol>
-    </div>
-  </span>
-</div>
-
-    
-    <div class="content index py4">
-        
-        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle" itemprop="name headline">
-        자바 - 문자열 찾기
-    </h1>
-
-
-
-    <div class="meta">
-      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span itemprop="name">C:\EEDLIVE</span>
-      </span>
-      
-    <div class="postdate">
-        <time datetime="2017-09-02T07:01:33.000Z" itemprop="datePublished">2017-09-02</time>
-    </div>
-
-
-      
-    <div class="article-category">
-        <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/Java/">Java</a> › <a class="category-link" href="/categories/Java/Method/">Method</a>
-    </div>
-
-
-      
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/contains/">contains</a>, <a class="tag-link" href="/tags/indexOf/">indexOf</a>, <a class="tag-link" href="/tags/java/">java</a>, <a class="tag-link" href="/tags/matches/">matches</a>
-    </div>
-
-
-    </div>
-  </header>
+  <!--Description-->
+  
+  <meta name="description" content="소프트웨어를 도구로 인류와 사회의 가치를 높이는데 소명을 다하는 삶">
   
 
-  <div class="content" itemprop="articleBody">
-    <h2 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h2><p><code>public boolean contains(CharSequence s)</code><br>Returns true if and only if this string contains the specified sequence of char values.<br><strong>Parameter:</strong><br>s - the sequence to search for<br><strong>Returns:</strong><br>true if this string contains s, false otherwise<br><strong>Since:</strong><br>1.5</p>
+  <!--Author-->
+  
+  <meta name="author" content="better than choi">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="자바 - 문자열 찾기">
+  
+  <!--Open Graph Description-->
+  
+      <meta property="og:description" content="소프트웨어를 도구로 인류와 사회의 가치를 높이는데 소명을 다하는 삶">
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="C:\EEDLIVE">
+  <!--Type page-->
+  
+      <meta property="og:type" content="article">
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>자바 - 문자열 찾기 - C:\EEDLIVE</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://hexo.io/logo.svg" alt="C:\EEDLIVE" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            자바 - 문자열 찾기
+            
+          </h1>
+          <p class="posted-on">
+          2017-09-02
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/java/" rel="tag">
+                  java
+                </a>
+              
+                <a href="/tags/contains/" rel="tag">
+                  contains
+                </a>
+              
+                <a href="/tags/indexOf/" rel="tag">
+                  indexOf
+                </a>
+              
+                <a href="/tags/matches/" rel="tag">
+                  matches
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content has_line_number">
+          <h2 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h2><p><code>public boolean contains(CharSequence s)</code><br>Returns true if and only if this string contains the specified sequence of char values.<br><strong>Parameter:</strong><br>s - the sequence to search for<br><strong>Returns:</strong><br>true if this string contains s, false otherwise<br><strong>Since:</strong><br>1.5</p>
 <h2 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h2><p><code>public int indexOf(int ch)</code><br>Returns the index within this string of the first occurrence of the specified character. If a character with value ch occurs in the character sequence represented by this String object, then the index (in Unicode code units) of the first such occurrence is returned. For values of ch in the range from 0 to 0xFFFF (inclusive), this is the smallest value k such that:<br> this.charAt(k) == ch</p>
 <p>is true. For other values of ch, it is the smallest value k such that:<br> this.codePointAt(k) == ch</p>
 <p>is true. In either case, if no such character occurs in this string, then -1 is returned.<br><strong>Parameters:</strong><br>ch - a character (Unicode code point).<br><strong>Returns:</strong><br>the index of the first occurrence of the character in the character sequence represented by this object, or -1 if the character does not occur.</p>
@@ -158,98 +156,125 @@
 <h2 id="백문이-불여일타"><a href="#백문이-불여일타" class="headerlink" title="백문이 불여일타"></a>백문이 불여일타</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by ceedlive on 2017. 9. 2..</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringFinder</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//variables</span></span><br><span class="line">        String description  = <span class="string">"배송지 정보: 인천광역시 서구, "</span></span><br><span class="line">                            + <span class="string">"주문도서: 진짜 잘 이해되는 중학 영문법 1"</span></span><br><span class="line">                            + <span class="string">"정가: (14,000원)"</span></span><br><span class="line">                            + <span class="string">"할인가: (12,600원)"</span></span><br><span class="line">                            ;</span><br><span class="line"></span><br><span class="line">        String mobileNo = <span class="string">"010-1234-5678"</span>;</span><br><span class="line">        String homeNo = <span class="string">"032-123-4567"</span>;</span><br><span class="line">        String email = <span class="string">"abcdefghijklmnopqrstuvwxyz@naver.com"</span>;</span><br><span class="line"></span><br><span class="line">        String regexMobileNo = <span class="string">"^01(?:0|1|[6-9])-(?:\\d&#123;3&#125;|\\d&#123;4&#125;)-\\d&#123;4&#125;$"</span>;<span class="comment">//휴대폰 번호 검증</span></span><br><span class="line">        String regexHomeNo = <span class="string">"^(02|0[3-9]&#123;1&#125;[0-9]&#123;1&#125;)-(?:\\d&#123;4&#125;|\\d&#123;3&#125;)-\\d&#123;4&#125;$"</span>;<span class="comment">//집/사무실 전화번호 검증</span></span><br><span class="line">        String regexEmail = <span class="string">"^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//try</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//contains</span></span><br><span class="line">        <span class="keyword">if</span> (description.contains(<span class="string">"인천광역시 서구"</span>)) &#123;</span><br><span class="line">            System.out.println(description.contains(<span class="string">"인천광역시 서구"</span>));<span class="comment">//true</span></span><br><span class="line">            System.out.println(<span class="string">"배송비 무료"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"배송비 유료"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//indexOf</span></span><br><span class="line">        <span class="keyword">if</span> (description.indexOf(<span class="string">"인천광역시 서구"</span>) &gt; -<span class="number">1</span>) &#123;</span><br><span class="line">            System.out.println(description.indexOf(<span class="string">"인천광역시 서구"</span>));<span class="comment">//8</span></span><br><span class="line">            System.out.println(<span class="string">"배송비 무료"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"배송비 유료"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//matches</span></span><br><span class="line">        <span class="keyword">if</span> (description.matches(<span class="string">".*인천광역시 서구.*"</span>)) &#123;</span><br><span class="line">            System.out.println(description.matches(<span class="string">".*인천광역시 서구.*"</span>));<span class="comment">//true</span></span><br><span class="line">            System.out.println(<span class="string">"배송비 무료"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"배송비 유료"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//matches</span></span><br><span class="line">        <span class="keyword">if</span> (description.matches(<span class="string">".*[0-9].*"</span>)) &#123;</span><br><span class="line">            System.out.println(description.matches(<span class="string">".*[0-9].*"</span>));<span class="comment">//true</span></span><br><span class="line">            System.out.println(<span class="string">"숫자 있음"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"숫자 없음"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (mobileNo.matches(regexMobileNo)) &#123;</span><br><span class="line">            System.out.println(<span class="string">"휴대폰 번호 형식과 일치"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"휴대폰 번호 형식과 일치하지 않음"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (homeNo.matches(regexHomeNo)) &#123;</span><br><span class="line">            System.out.println(<span class="string">"집/사무실 번호 형식과 일치"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"집/사무실 번호 형식과 일치하지 않음"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (email.matches(regexEmail)) &#123;</span><br><span class="line">            System.out.println(<span class="string">"이메일 형식과 일치"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"이메일 형식과 일치하지 않음"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><p>Class String <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#method.summary" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#method.summary</a></p>
 
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">Comments</h1> -->
+
+  
+  <div id="disqus_thread">
+    <script type="text/javascript">
+    var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = 'post-java-find-string';
+          this.page.title = '자바 - 문자열 찾기';
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-</article>
+  
+</section>
 
-
-
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#contains"><span class="toc-number">1.</span> <span class="toc-text">contains</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#indexOf"><span class="toc-number">2.</span> <span class="toc-text">indexOf</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#matches"><span class="toc-number">3.</span> <span class="toc-text">matches</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#백문이-불여일타"><span class="toc-number">4.</span> <span class="toc-text">백문이 불여일타</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#참고"><span class="toc-number">5.</span> <span class="toc-text">참고</span></a></li></ol>
-    </div>
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ceedlive.github.io/2017/09/02/java-find-string/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://ceedlive.github.io/2017/09/02/java-find-string/&text=자바 - 문자열 찾기"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ceedlive.github.io/2017/09/02/java-find-string/&is_video=false&description=자바 - 문자열 찾기"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=자바 - 문자열 찾기&body=Check out this article: https://ceedlive.github.io/2017/09/02/java-find-string/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://ceedlive.github.io/2017/09/02/java-find-string/&title=자바 - 문자열 찾기"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ceedlive.github.io/2017/09/02/java-find-string/&name=자바 - 문자열 찾기&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-</ul>
 
     </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2017/09/05/hexo-basic-usage/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> Older Posts</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/2017/09/01/java-create-random-key/" rel="prev">Newer Posts <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
     </div>
 
   </div>
 </div>
 
-        
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy; 2018 better than choi
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          소프트웨어를 도구로 인류와 사회의 가치를 높이는데 소명을 다하는 삶
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Contact</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/GallenHu" class="icon icon-github" target="_blank">github</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Search</h1>
+        <div class="widget-text">
+          <form onsubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
   </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="/projects_url">Projects</a></li>
-        
-      </ul>
-    </nav>
-  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>C:\EEDLIVE &copy; 2018</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a></span>
+    
+  </p>
 </footer>
 
-    </div>
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+<script>
+  var disqus_shortname = 'ceedlive';
+
+  
+  var disqus_url = 'https://ceedlive.github.io/2017/09/02/java-find-string/';
+  
+
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
 </body>
+
 </html>
-<!-- styles -->
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
-
-<!-- jquery -->
-<script src="/lib/jquery/jquery.min.js"></script>
-<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
-<script src="/js/main.js"></script>
-<!-- search -->
-
-<!-- Google Analytics -->
-
-<!-- Baidu Analytics -->
-
-<!-- Disqus Comments -->
-
-
